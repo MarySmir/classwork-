@@ -1,0 +1,78 @@
+public class Circle {
+    double radius;
+    double area;
+    double hekef;
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", area=" + area +
+                ", hekef=" + hekef +
+                '}';
+    }
+
+    void calcAreaAndHekef() {
+        this.area = this.radius * this.radius * 3.14;
+        this.hekef = radius * 2 * 3.14;
+    }
+
+    void updateRadius(double newRadius) {
+        this.radius=newRadius;
+    }
+
+
+    public Circle(double radius) {
+        this.radius = radius;
+       calcAreaAndHekef();
+    }
+}
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+Circle c1 = new Circle(18);
+Circle c2 = new Circle(7);
+c1.calcAreaAndHekef();
+c2.calcAreaAndHekef();
+
+        c1.updateRadius(55);
+        System.out.println(c1);
+        System.out.println(c2);
+    }
+}
+
+//ublic class Triangle {
+//   double a;
+//   double b ;
+//   double c;
+//   double h;
+//   double area =1;
+//   double hekef=1;
+
+//   @Override
+//   public String toString() {
+//       return "Triangle{" +
+//               "a=" + a +
+//               ", b=" + b +
+//               ", c=" + c +
+//               ", h=" + h +
+//               ", area=" + area +
+//               ", hekef=" + hekef +
+//               '}';
+//   }
+//void calcArea(){
+//     this.area= this.h*this.b/2;
+//}
+//void calcHekef(){
+//       this.hekef=this.a+this.b+this.c ;
+//}
+//   public Triangle(double a, double b, double c, double h) {
+//       this.a = a;
+//       this.b = b;
+//       this.c = c;
+//       this.h = h;
+
+
